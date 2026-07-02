@@ -60,7 +60,7 @@ p, h1, h2, h3, h4, h5, h6 {
 #main-column {
     display: flex;
     width: calc(100vw - 1rem);
-    max-width: 40rem;
+    /* max-width: 40rem; */
     min-width: 360px;
     flex-direction: column;
     justify-content: start;
@@ -132,11 +132,23 @@ p, h1, h2, h3, h4, h5, h6 {
     min-height: 1.5rem;
 }
 
-@media (min-width: 41rem) {
+@media (min-width: 656px) {
+    #main-column {
+        max-width: 40rem;
+    }
     .game-image {
         max-width: 240px;
     }
     .game-info {
         max-width: 340px;
+    }
+}
+
+@media (max-width: 656px) {
+    #main-column {
+        max-width: 360px;
+    }
+    .game-image {
+        max-width: 100%;
     }
 }
